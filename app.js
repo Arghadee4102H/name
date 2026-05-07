@@ -298,7 +298,7 @@ function renderIdentities() {
 // --- Utilities ---
 
 function formatIdentityText(idObj) {
-    return \`Name: \${idObj.fullName}\nGender: \${idObj.gender}\nDOB: \${idObj.dob}\nEmail: \${idObj.email}\nCountry: \${idObj.country}\n---\`;
+    return `Name: ${idObj.fullName}\nGender: ${idObj.gender}\nDOB: ${idObj.dob}\nEmail: ${idObj.email}\nCountry: ${idObj.country}\n---`;
 }
 
 window.copySingle = function(id) {
@@ -323,7 +323,7 @@ function downloadTXT() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = \`identities_\${Date.now()}.txt\`;
+    a.download = `identities_${Date.now()}.txt`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
